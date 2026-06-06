@@ -22,6 +22,7 @@ const capabilities = [
   "Transformer oil dehydration & oil testing",
   "11 kV cable testing & TTR testing",
   "OCB & VCB overhaul up to 33 kV",
+  "Complete 11 kV VCB panels",
   "Transformer & HT panel repair",
   "Vacuum interrupter servicing & oil filtration",
   "Performance restoration & preventive maintenance",

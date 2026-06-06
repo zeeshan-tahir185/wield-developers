@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin, Smartphone } from "lucide-react";
 import { Logo } from "./Logo";
-import { FacebookIcon } from "./ui/FacebookIcon";
 import { navLinks, site } from "@/lib/site";
 import { services } from "@/lib/services";
 
@@ -116,15 +115,6 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-            <a
-              href={site.social.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-navy-700 text-navy-100/70 transition-colors hover:border-gold-400 hover:text-gold-300"
-              aria-label="Facebook"
-            >
-              <FacebookIcon className="h-4 w-4" />
-            </a>
           </div>
         </div>
 

@@ -40,7 +40,7 @@ export const services: Service[] = [
     ],
     highlights: [
       "15 kVA – 15,000 kVA distribution & power transformers",
-      "Oil-immersed units — e.g. 150 kVA & 500 kVA (11 kV / 415 V)",
+      "Oil-immersed units — e.g. 150, 250 & 500 kVA (11 kV / 415 V)",
       "State-of-the-art Karachi manufacturing facility",
       "Premium-grade materials & low energy losses",
       "Manufactured & tested to international standards",
@@ -131,6 +131,7 @@ export const services: Service[] = [
     ],
     highlights: [
       "OCB & VCB up to 33 kV",
+      "Complete 11 kV VCB panels — built & dispatched",
       "Complete overhauling & fault diagnosis",
       "Vacuum interrupter servicing",
       "Oil filtration, testing & performance restoration",

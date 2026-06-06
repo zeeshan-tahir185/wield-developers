@@ -18,10 +18,6 @@ export const site = {
     fax: "+92 51 8743257",
     address: "761, Lane 7-E, Near Joyland, Gulistan Colony, Rawalpindi, Pakistan",
   },
-  social: {
-    // Client to provide the live Facebook page link — used for the Gallery source.
-    facebook: "https://www.facebook.com/",
-  },
   registrations: ["PEC", "SECP", "FBR", "RCCI"],
 } as const;
 

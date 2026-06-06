@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Mail, Phone, Smartphone, Printer, MapPin, Clock, Globe } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
-import { FacebookIcon } from "@/components/ui/FacebookIcon";
 import { Reveal } from "@/components/ui/Reveal";
 import { site } from "@/lib/site";
 
@@ -117,7 +116,7 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white p-6">
+              <div className="flex items-center rounded-2xl border border-slate-200 bg-white p-6">
                 <a
                   href={site.url}
                   target="_blank"
@@ -126,15 +125,6 @@ export default function ContactPage() {
                 >
                   <Globe className="h-4 w-4 text-gold-500" />
                   www.wielddevelopers.com
-                </a>
-                <a
-                  href={site.social.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm font-medium text-navy-700 hover:text-gold-600"
-                >
-                  <FacebookIcon className="h-4 w-4 text-gold-500" />
-                  Follow us on Facebook
                 </a>
               </div>
             </div>

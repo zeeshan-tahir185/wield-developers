@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Images } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
-import { FacebookIcon } from "@/components/ui/FacebookIcon";
 import { Reveal } from "@/components/ui/Reveal";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Photo } from "@/components/ui/Photo";
 import { CTASection } from "@/components/CTASection";
 import { galleryCategories } from "@/lib/gallery";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -46,25 +43,6 @@ export default function GalleryPage() {
         description="A visual journey through our completed and ongoing work — across renewable energy, civil infrastructure, buildings and specialised projects."
         crumbs={[{ label: "Gallery" }]}
       />
-
-      {/* Source note */}
-      <section className="border-b border-slate-100 bg-white py-6">
-        <div className="container-px flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-          <p className="flex items-center gap-2 text-sm text-slate-500">
-            <Images className="h-4 w-4 text-gold-500" />
-            Photos are added from our official Facebook page.
-          </p>
-          <a
-            href={site.social.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-800"
-          >
-            <FacebookIcon className="h-4 w-4" />
-            Visit our Facebook
-          </a>
-        </div>
-      </section>
 
       <section className="bg-white py-16 sm:py-20">
         <div className="container-px space-y-16">

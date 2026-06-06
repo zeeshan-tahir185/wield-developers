@@ -146,18 +146,31 @@
   }
 }
 
-/* Scroll-reveal: elements with data-reveal animate in when .is-visible is set */
+/* Scroll-reveal: elements with data-reveal animate in when .is-visible is set.
+   FAILSAFE: a pure-CSS animation forces every element visible after 2.5s, so
+   content can NEVER stay hidden — even if JS/hydration/IntersectionObserver
+   fails entirely. (Animations override transitions, fill-forwards keeps it.) */
 [data-reveal] {
   opacity: 0;
   transform: translateY(28px);
   transition:
     opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: reveal-failsafe 0.7s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards;
 }
 
 [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
+  /* JS reveal happened — cancel the pending failsafe so it can't re-trigger. */
+  animation: none;
+}
+
+@keyframes reveal-failsafe {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
