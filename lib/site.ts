@@ -30,6 +30,7 @@ export const navLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
+  { label: "EPC Projects", href: "/epc-projects" },
   { label: "Transformers & Electrical", href: "/transformers" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },

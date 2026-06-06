@@ -48,7 +48,7 @@ export default function EpcProjectsPage() {
                     <span
                       className={`rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider ${
                         p.status === "Ongoing"
-                          ? "bg-eco-50 text-eco-600"
+                          ? "bg-eco-500/10 text-eco-600"
                           : "bg-navy-50 text-navy-600"
                       }`}
                     >
