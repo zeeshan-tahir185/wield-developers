@@ -12,7 +12,7 @@ import { epcProjects } from "@/lib/epc";
 export const metadata: Metadata = {
   title: "EPC Projects",
   description:
-    "Turnkey EPC (Engineering, Procurement & Construction) projects by Wield Developers — utility-scale solar and wind energy systems delivered from feasibility to commissioning.",
+    "Turnkey EPC (Engineering, Procurement & Construction) projects by Wield Developers — solar and wind energy systems and civil construction works delivered from feasibility to commissioning.",
 };
 
 export default function EpcProjectsPage() {
@@ -21,7 +21,7 @@ export default function EpcProjectsPage() {
       <PageHero
         eyebrow="EPC Projects"
         title="Turnkey energy projects, end to end"
-        description="Engineering, Procurement & Construction — we deliver complete solar and wind energy systems from feasibility and design through supply, installation and grid-connected commissioning."
+        description="Engineering, Procurement & Construction — we deliver complete projects from feasibility and design through procurement, construction and commissioning, across energy systems and civil infrastructure."
         crumbs={[{ label: "EPC Projects" }]}
       />
 
@@ -103,7 +103,7 @@ export default function EpcProjectsPage() {
 
       <CTASection
         title="Planning an EPC project?"
-        description="From feasibility to commissioning — talk to our engineering team about your solar, wind or power infrastructure project."
+        description="From feasibility to commissioning — talk to our engineering team about your energy, construction or power infrastructure project."
       />
     </>
   );

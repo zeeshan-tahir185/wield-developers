@@ -81,49 +81,11 @@ export const projects: Project[] = [
     category: "Wind",
   },
   {
-    title:
-      "Design, Fabrication & Installation of High-Security Surveillance Watch Towers (Safe City Project)",
-    client: "Celmore Technologies",
-    year: "2022-24",
-    status: "Completed",
-    category: "Infrastructure",
-  },
-  {
-    title:
-      "Design, Supply & Erection of Hybrid Wind Energy System for Industrial Operations (1.2 MW)",
-    client: "Celmore Technologies",
-    year: "2023-24",
-    status: "Completed",
-    category: "Wind",
-  },
-  {
-    title: "Installation & Grid Integration of Distributed Wind Power Units (1.8 MW)",
-    client: "Celmore Technologies",
-    year: "2023-24",
-    status: "Completed",
-    category: "Wind",
-  },
-  {
-    title:
-      "Feasibility, Design, Supply, Installation & Commissioning of 2.5 MW Wind Turbine System",
-    client: "Celmore Technologies",
-    year: "2022-23",
-    status: "Completed",
-    category: "Wind",
-  },
-  {
     title: "Infrastructure Development of Bismillah Orchards",
     client: "Bismillah Orchard, Faisalabad",
     year: "2022-24",
     status: "Completed",
     category: "Infrastructure",
-  },
-  {
-    title: "Repair of Machineries of E&M Workshop Division",
-    client: "E&M Workshop Division, Quetta",
-    year: "2022-23",
-    status: "Completed",
-    category: "Other",
   },
   {
     title: "EPDM Jogging Track — EPDM PU System",

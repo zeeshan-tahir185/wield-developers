@@ -42,6 +42,17 @@ const workshopPhotos = [
   { src: "/images/transformers/transformer-workshop.jpg", alt: "Power transformer in the workshop" },
 ];
 
+// Full set of authentic transformer & electrical photos from our facility.
+const galleryPhotos = [
+  { src: "/images/transformers/power-transformer.jpg", alt: "Oil-filled power transformer with radiators and bushings" },
+  { src: "/images/transformers/transformer-workshop.jpg", alt: "Large power transformer in our manufacturing workshop" },
+  { src: "/images/transformers/distribution-transformer.jpg", alt: "Distribution transformer manufactured at our facility" },
+  { src: "/images/transformers/windings.jpg", alt: "Three-phase transformer windings" },
+  { src: "/images/transformers/switchgear-vcb.jpg", alt: "Vacuum circuit breaker (VCB) switchgear panels" },
+  { src: "/images/transformers/bushings-closeup.jpg", alt: "Transformer bushings and tap-changer close-up" },
+  { src: "/images/transformers/pole-installation-diagram.jpg", alt: "25 kVA single-phase pole transformer installation diagram" },
+];
+
 export default function TransformersPage() {
   const powerServices = services.filter((s) => s.category === "Power & Electrical");
 
@@ -198,6 +209,42 @@ export default function TransformersPage() {
               </div>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section className="bg-navy-50/60 py-20 sm:py-28">
+        <div className="container-px">
+          <SectionHeading
+            align="center"
+            eyebrow="Gallery"
+            title="From our facility"
+            description="A look at transformers, windings and switchgear from our Power & Electrical division."
+            className="mb-14"
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {galleryPhotos.map((p, i) => (
+              <Reveal
+                key={p.src}
+                delay={(i % 3) * 60}
+                className={i === 0 ? "sm:col-span-2 lg:row-span-2" : ""}
+              >
+                <Photo
+                  src={p.src}
+                  alt={p.alt}
+                  priority={i === 0}
+                  className={`w-full rounded-2xl shadow-sm ${
+                    i === 0 ? "aspect-[16/10] lg:aspect-[4/5]" : "aspect-[4/3]"
+                  }`}
+                  sizes={
+                    i === 0
+                      ? "(max-width: 768px) 100vw, 66vw"
+                      : "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  }
+                />
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
