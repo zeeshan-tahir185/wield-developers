@@ -126,10 +126,10 @@ export default function AboutPage() {
             </blockquote>
             <footer className="mt-6">
               <div className="font-display text-lg font-bold text-navy-900">
-                Syed Muhammad Ali
+                AVM Ikram Ul Haq
               </div>
               <div className="text-sm text-slate-500">
-                Director, {site.legalName}
+                Managing Director, {site.legalName}
               </div>
             </footer>
           </Reveal>
