@@ -1,9 +1,15 @@
 // Company facts used across About / Home — core staff, values, milestones, stats.
 
-export const coreStaff = [
-  { name: "Syed Muhammad Ali", qualification: "BBA", designation: "Chief Executive Officer" },
-  { name: "Muhammad Faisal Mureed", qualification: "MBA", designation: "Chief Financial Officer" },
-  { name: "Naeem Feroze", qualification: "MBA", designation: "Chief Operating Officer" },
+export const coreStaff: {
+  name: string;
+  qualification: string;
+  designation: string;
+  image?: string;
+}[] = [
+  { name: "Air Vice Marshall Ikram Ul Haq Noor (Retd)", qualification: "SI(M), PAF", designation: "Managing Director", image: "/images/team/md-ikram-ul-haq.jpg" },
+  { name: "Syed Muhammad Ali", qualification: "BBA", designation: "Chief Executive Officer", image: "/images/team/ceo-syed-muhammad-ali.jpg" },
+  { name: "Muhammad Faisal Mureed", qualification: "MBA", designation: "Chief Financial Officer", image: "/images/team/cfo-faisal-mureed.jpg" },
+  { name: "Naeem Feroze", qualification: "MBA", designation: "Chief Operating Officer", image: "/images/team/coo-naeem-feroze.jpg" },
   { name: "Air Cdr. Aqil Tahir", qualification: "PAF", designation: "Director Marketing" },
   { name: "Saif Ullah", qualification: "BSc CE", designation: "PD Electrical & Cyber Security" },
   { name: "Dr. Atif Naveed", qualification: "PhD Renewable Energies", designation: "Chief Technology Officer" },
@@ -21,6 +27,19 @@ export const coreStaff = [
   { name: "Abdullah Khan", qualification: "NEBOSH", designation: "HSE Officer" },
   { name: "Syed Faisal Ali", qualification: "MSc SE", designation: "Software PD" },
   { name: "Malik Waseem Sajjad", qualification: "BSc SE", designation: "Software Developer" },
+];
+
+// Board of Directors — shown in the "Board of Directors" section on the About page.
+export const boardOfDirectors: {
+  name: string;
+  qualification: string;
+  designation: string;
+  image?: string;
+}[] = [
+  { name: "Muhammad Faisal Mureed", qualification: "MBA", designation: "Chief Financial Officer", image: "/images/team/cfo-faisal-mureed.jpg" },
+  { name: "Air Vice Marshall Ikram Ul Haq Noor (Retd)", qualification: "SI(M), PAF", designation: "Director Marketing", image: "/images/team/md-ikram-ul-haq.jpg" },
+  { name: "Naeem Feroze", qualification: "MBA", designation: "Chief Operating Officer", image: "/images/team/coo-naeem-feroze.jpg" },
+  { name: "Syed Muhammad Ali", qualification: "BBA", designation: "Chief Executive Officer", image: "/images/team/ceo-syed-muhammad-ali.jpg" },
 ];
 
 export const coreValues = [
@@ -53,7 +72,6 @@ export const coreValues = [
 
 export const stats = [
   { value: "2013", label: "Established", suffix: "" },
-  { value: "100", label: "Engineers & Staff", suffix: "+" },
   { value: "225", label: "Wind Mills Installed", suffix: "" },
   { value: "8", label: "Business Divisions", suffix: "" },
 ];

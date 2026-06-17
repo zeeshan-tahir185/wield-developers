@@ -84,12 +84,25 @@ export const galleryCategories: GalleryCategory[] = [
       { src: "/images/hse/work-at-height-2.png", alt: "Tool-tethering belt and work-at-height accessories" },
     ],
   },
-  { slug: "prayer-area-bridge-joyland", title: "Construction of Prayer Area Building & Connecting Bridge, Joyland", count: 4 },
+  {
+    slug: "prayer-area-bridge-joyland",
+    title: "Construction of Prayer Area Building & Connecting Bridge, Joyland",
+    count: 4,
+    images: [
+      { src: "/images/prayer-area/prayer-1.png", alt: "Prayer area building with arched façade at Joyland, Rawalpindi" },
+      { src: "/images/prayer-area/prayer-2.png", alt: "Prayer area building with paving and finishing works in progress, Joyland" },
+      { src: "/images/prayer-area/prayer-3.png", alt: "Paved connecting walkway under construction at Joyland" },
+      { src: "/images/prayer-area/prayer-4.png", alt: "Landscaped courtyard and paving around the prayer area, Joyland" },
+    ],
+  },
   {
     slug: "solar-power",
     title: "Design & Installation of Solar Power System",
-    count: 4,
+    count: 7,
     images: [
+      { src: "/images/solar/solar-5.jpg", alt: "Rooftop solar PV array on elevated steel structure overlooking the city" },
+      { src: "/images/solar/solar-7.jpg", alt: "Elevated solar panel canopy against a clear sky" },
+      { src: "/images/solar/solar-6.jpg", alt: "Solar panel canopy structure under installation on a rooftop" },
       { src: "/images/solar/solar-1.png", alt: "Rooftop solar PV panel array on steel mounting structure" },
       { src: "/images/solar/solar-2.png", alt: "Rooftop solar PV array on steel carport-style mounting" },
       { src: "/images/solar/solar-3.png", alt: "Rooftop solar panel canopy over a paved terrace" },
@@ -120,12 +133,17 @@ export const galleryCategories: GalleryCategory[] = [
   {
     slug: "building",
     title: "Building Design & Construction",
-    count: 4,
+    count: 9,
     images: [
       { src: "/images/building/building-1.jpg", alt: "Building under construction — concrete columns and masonry walls" },
       { src: "/images/building/building-2.jpg", alt: "Building raft foundation with column rebar starters" },
       { src: "/images/building/building-3.jpg", alt: "Foundation rebar mat with column cages" },
       { src: "/images/building/building-4.jpg", alt: "Night concrete pour with boom pump on a building frame" },
+      { src: "/images/building/building-6.jpg", alt: "Completed two-storey house with stone-clad boundary wall" },
+      { src: "/images/building/building-5.jpg", alt: "Reinforced concrete roof slab with shuttering during construction" },
+      { src: "/images/building/building-7.jpg", alt: "Worker plastering a balcony soffit from scaffolding" },
+      { src: "/images/building/building-9.jpg", alt: "Excavator carrying out site earthwork and excavation" },
+      { src: "/images/building/building-8.jpg", alt: "Brick masonry and foundation work in progress on site" },
     ],
   },
   {

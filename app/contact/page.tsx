@@ -72,7 +72,7 @@ export default function ContactPage() {
                       <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                         {c.label}
                       </div>
-                      <div className="mt-1 font-medium text-navy-900 break-all">
+                      <div className="mt-1 font-medium text-navy-900 text-sm sm:text-[15px] whitespace-nowrap">
                         {c.value}
                       </div>
                     </div>

@@ -1,8 +1,39 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Icon } from "./ui/Icon";
-import type { Service } from "@/lib/services";
+import type { Service, divisions } from "@/lib/services";
 import type { Project } from "@/lib/projects";
+
+export function DivisionCard({ division }: { division: (typeof divisions)[number] }) {
+  return (
+    <Link
+      href={`/services#${division.slug}`}
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-2xl hover:shadow-navy-900/10"
+    >
+      {/* hover accent corner */}
+      <div className="absolute right-0 top-0 h-24 w-24 translate-x-12 -translate-y-12 rounded-full bg-gold-400/10 transition-transform duration-500 group-hover:translate-x-8 group-hover:-translate-y-8" />
+
+      <div className="relative grid h-14 w-14 place-items-center rounded-xl bg-navy-900 text-gold-400 transition-colors duration-300 group-hover:bg-gold-500 group-hover:text-navy-950">
+        <Icon name={division.icon} className="h-7 w-7" />
+      </div>
+
+      <span className="mt-5 inline-block text-[11px] font-semibold uppercase tracking-[0.16em] text-gold-600">
+        Division
+      </span>
+      <h3 className="mt-2 font-display text-lg font-bold leading-snug text-navy-900 transition-colors group-hover:text-navy-700">
+        {division.name}
+      </h3>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+        {division.summary}
+      </p>
+
+      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-700 transition-colors group-hover:text-gold-600">
+        Explore division
+        <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+      </span>
+    </Link>
+  );
+}
 
 export function ServiceCard({ service }: { service: Service }) {
   return (

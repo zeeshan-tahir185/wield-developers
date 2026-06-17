@@ -3,7 +3,10 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { ServiceCard } from "@/components/cards";
 import { CTASection } from "@/components/CTASection";
-import { services, serviceCategories } from "@/lib/services";
+import { services, serviceCategories, divisions } from "@/lib/services";
+
+const divisionSlug = (category: string) =>
+  divisions.find((d) => d.name === category)?.slug;
 
 export const metadata: Metadata = {
   title: "Our Expertise",
@@ -27,7 +30,7 @@ export default function ServicesPage() {
             const items = services.filter((s) => s.category === category);
             if (items.length === 0) return null;
             return (
-              <div key={category}>
+              <div key={category} id={divisionSlug(category)} className="scroll-mt-28">
                 <div className="mb-10 flex items-center gap-4">
                   <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
                     {category}

@@ -559,3 +559,70 @@ export const serviceCategories = [
   "Procurement & Supply Chain Solutions",
   "Health, Safety & Environmental (HSE) Services",
 ] as const;
+
+// The eight business divisions from the 2026 Company Profile — used for the
+// "Our Expertise" division cards (home) and as deep-link anchors on /services.
+// `name` matches the service `category` union; `slug` is the /services anchor id.
+export const divisions: {
+  name: Service["category"];
+  slug: string;
+  icon: string;
+  summary: string;
+}[] = [
+  {
+    name: "Electrical Equipment Manufacturing",
+    slug: "electrical-equipment-manufacturing",
+    icon: "Factory",
+    summary:
+      "Design, manufacturing, testing and maintenance of power & distribution transformers (15–15,000 kVA), CTs & PTs, windings and OCB/VCB switchgear.",
+  },
+  {
+    name: "Renewable Energy Solutions",
+    slug: "renewable-energy-solutions",
+    icon: "Sun",
+    summary:
+      "Design, installation and commissioning of solar PV and wind energy projects, with site assessment, grid integration and project management.",
+  },
+  {
+    name: "Construction, Design & Engineering Consultancy",
+    slug: "construction-design-engineering-consultancy",
+    icon: "Building2",
+    summary:
+      "Residential, commercial and industrial construction, infrastructure and bridges — backed by engineering consultancy, project management and QA/QC.",
+  },
+  {
+    name: "Road Infrastructure Development",
+    slug: "road-infrastructure-development",
+    icon: "Construction",
+    summary:
+      "Planning, design, construction and rehabilitation of highways, urban & rural roads, pavements, drainage and transportation infrastructure.",
+  },
+  {
+    name: "Information Technology & Telecommunications",
+    slug: "information-technology-telecommunications",
+    icon: "Network",
+    summary:
+      "Telecom infrastructure, fiber-optic and wireless networks, ICT system integration, cybersecurity and CCTV & surveillance solutions.",
+  },
+  {
+    name: "Software Development & Digital Solutions",
+    slug: "software-development-digital-solutions",
+    icon: "Code2",
+    summary:
+      "Custom software, ERP and LMS platforms, web & mobile apps, business-process automation and cloud-based digital solutions.",
+  },
+  {
+    name: "Procurement & Supply Chain Solutions",
+    slug: "procurement-supply-chain-solutions",
+    icon: "Truck",
+    summary:
+      "Strategic sourcing, international procurement, machinery & technology imports, vendor management and turnkey equipment supply.",
+  },
+  {
+    name: "Health, Safety & Environmental (HSE) Services",
+    slug: "health-safety-environmental-hse-services",
+    icon: "ShieldCheck",
+    summary:
+      "HSE management systems, safety audits, risk assessments and training, plus supply of PPE, fire-protection and rescue equipment.",
+  },
+];

@@ -8,19 +8,18 @@ import {
   Building2,
 } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
-import { SectionHeading, Eyebrow } from "@/components/ui/SectionHeading";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
 import { Photo } from "@/components/ui/Photo";
-import { ServiceCard, ProjectCard, StatCard } from "@/components/cards";
+import { DivisionCard, ProjectCard, StatCard } from "@/components/cards";
 import { CTASection } from "@/components/CTASection";
-import { services } from "@/lib/services";
+import { divisions } from "@/lib/services";
 import { projects } from "@/lib/projects";
 import { stats, coreValues } from "@/lib/company";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
-  const featuredServices = services.slice(0, 6);
   const featuredProjects = projects.filter((p) => p.status === "Ongoing").slice(0, 6);
 
   return (
@@ -48,7 +47,7 @@ export default function HomePage() {
               {site.legalName} is a multidisciplinary engineering, infrastructure
               and technology group — delivering integrated solutions across
               electrical manufacturing, renewable energy, construction, IT &amp;
-              telecom, software and procurement, backed by 100+ engineers and an
+              telecom, software and procurement, backed by experienced engineers and an
               ISO 9001:2015 certified quality system.
             </p>
 
@@ -62,16 +61,12 @@ export default function HomePage() {
               </ButtonLink>
             </div>
 
-            <div className="animate-fade-up mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-navy-800 pt-8">
-              {stats.slice(0, 3).map((s) => (
-                <div key={s.label}>
-                  <div className="font-display text-2xl font-extrabold text-white sm:text-3xl">
-                    {s.value}
-                    <span className="text-gold-400">{s.suffix}</span>
-                  </div>
-                  <div className="mt-1 text-xs text-navy-100/60">{s.label}</div>
-                </div>
-              ))}
+            <div className="animate-fade-up mt-12 flex max-w-lg flex-wrap items-center gap-x-3 gap-y-2 border-t border-navy-800 pt-8 font-display text-sm font-bold uppercase tracking-[0.2em] text-white sm:text-base">
+              <span>Engineering</span>
+              <span className="text-gold-400">·</span>
+              <span>Procurement</span>
+              <span className="text-gold-400">·</span>
+              <span>Construction</span>
             </div>
           </div>
 
@@ -143,17 +138,14 @@ export default function HomePage() {
           <Reveal>
             <div className="relative">
               <Photo
-                src="/images/team/team-1.jpg"
-                alt="Wield Developers site team in safety gear"
+                src="/images/solar/solar-5.jpg"
+                alt="Rooftop solar power system installed by Wield Developers"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="aspect-[5/4] w-full rounded-3xl border border-slate-200"
               />
               <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-navy-900 p-6 text-white shadow-2xl sm:block">
-                <div className="font-display text-4xl font-extrabold text-gold-400">
-                  100<span className="text-white">+</span>
-                </div>
-                <div className="mt-1 max-w-[8rem] text-sm text-navy-100/70">
-                  Engineers, diploma holders &amp; skilled staff
+                <div className="max-w-[10rem] font-display text-lg font-bold leading-snug text-gold-400">
+                  Experienced engineers, diploma holders &amp; skilled staff
                 </div>
               </div>
             </div>
@@ -208,70 +200,13 @@ export default function HomePage() {
             </ButtonLink>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredServices.map((service, i) => (
-              <Reveal key={service.slug} delay={i * 70}>
-                <ServiceCard service={service} />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {divisions.map((division, i) => (
+              <Reveal key={division.slug} delay={(i % 4) * 70}>
+                <DivisionCard division={division} />
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ============ RENEWABLE ENERGY FEATURE ============ */}
-      <section className="relative overflow-hidden bg-navy-950 py-20 text-white sm:py-28">
-        <div className="bg-blueprint absolute inset-0 opacity-50" />
-        <div className="absolute -right-32 top-0 h-96 w-96 rounded-full bg-eco-500/10 blur-3xl" />
-        <div className="container-px relative grid items-center gap-14 lg:grid-cols-2">
-          <Reveal>
-            <Eyebrow light>Renewable Energy</Eyebrow>
-            <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-              Powering progress with{" "}
-              <span className="text-gradient-gold">clean energy</span>
-            </h2>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-navy-100/80">
-              Beyond conventional construction, we are actively contributing to
-              Pakistan&apos;s renewable energy infrastructure — from utility-scale
-              solar systems to wind farms and hybrid energy installations.
-            </p>
-
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
-              <div className="rounded-2xl border border-navy-700 bg-navy-900/50 p-6">
-                <Wind className="h-8 w-8 text-eco-400" />
-                <h3 className="mt-4 font-display text-lg font-bold">Wind Energy</h3>
-                <p className="mt-2 text-sm text-navy-100/70">
-                  Turbine installation, commissioning &amp; grid integration — up to
-                  2.5 MW systems delivered.
-                </p>
-              </div>
-              <div className="rounded-2xl border border-navy-700 bg-navy-900/50 p-6">
-                <Sun className="h-8 w-8 text-gold-400" />
-                <h3 className="mt-4 font-display text-lg font-bold">Solar Power</h3>
-                <p className="mt-2 text-sm text-navy-100/70">
-                  Design, installation &amp; commissioning of on-grid and hybrid
-                  solar systems.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-9 flex flex-wrap gap-4">
-              <ButtonLink href="/services/solar-power-systems" variant="primary">
-                Solar Solutions
-              </ButtonLink>
-              <ButtonLink href="/services/wind-turbine-installation" variant="outline">
-                Wind Solutions
-              </ButtonLink>
-            </div>
-          </Reveal>
-
-          <Reveal delay={120}>
-            <Photo
-              src="/images/solar/solar-2.png"
-              alt="Rooftop solar power system installed by Wield Developers"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="aspect-square w-full rounded-3xl border border-navy-700/60 shadow-2xl"
-            />
-          </Reveal>
         </div>
       </section>
 
@@ -318,23 +253,25 @@ export default function HomePage() {
       {/* ============ FEATURED PROJECTS ============ */}
       <section className="bg-navy-50/60 py-20 sm:py-28">
         <div className="container-px">
-          <div className="flex flex-col items-end justify-between gap-6 md:flex-row">
-            <SectionHeading
-              eyebrow="Past Performance"
-              title="Projects currently in progress"
-              description="A snapshot of the ongoing work delivering value to clients across Pakistan."
-            />
-            <ButtonLink href="/projects" variant="ghost" className="shrink-0">
-              All projects
-              <ArrowRight className="h-4 w-4" />
-            </ButtonLink>
-          </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <SectionHeading
+            align="center"
+            eyebrow="Past Performance"
+            title="Projects currently in progress"
+            description="A snapshot of the ongoing work delivering value to clients across Pakistan."
+            className="mb-14"
+          />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((p, i) => (
               <Reveal key={p.title} delay={i * 60}>
                 <ProjectCard project={p} />
               </Reveal>
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <ButtonLink href="/projects" variant="secondary" size="lg">
+              All projects
+              <ArrowRight className="h-4 w-4" />
+            </ButtonLink>
           </div>
         </div>
       </section>

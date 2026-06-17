@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Target, Compass, Quote, BadgeCheck } from "lucide-react";
+import { Target, Compass, Quote } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Photo } from "@/components/ui/Photo";
 import { StatCard } from "@/components/cards";
 import { CTASection } from "@/components/CTASection";
-import { coreStaff, coreValues, milestones, stats } from "@/lib/company";
+import { boardOfDirectors, coreValues, milestones, stats } from "@/lib/company";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -66,16 +65,16 @@ export default function AboutPage() {
                 Our operations are governed by an ISO 9001:2015 Certified Quality
                 Management System, reflecting our commitment to continuous
                 improvement and customer satisfaction. Registered with PEC, SECP,
-                FBR and RCCI, and backed by 100+ experienced engineers, consultants
+                FBR and RCCI, and backed by experienced engineers, consultants
                 and technical specialists, we remain committed to creating
                 long-term value through technical excellence, integrity and
                 reliable service delivery.
               </p>
             </div>
-            <div className="mt-7 inline-flex items-center gap-3 rounded-2xl border border-eco-500/30 bg-eco-500/10 px-5 py-3">
-              <BadgeCheck className="h-6 w-6 shrink-0 text-eco-600" />
-              <span className="text-sm font-semibold text-navy-800">
-                ISO 9001:2015 Certified Quality Management System
+            <div className="mt-7 inline-flex items-center gap-3 rounded-2xl border border-gold-500/30 bg-gold-500/10 px-5 py-3">
+              <span className="text-sm font-bold uppercase tracking-wider text-navy-800">
+                Engineering <span className="text-gold-500">·</span> Procurement{" "}
+                <span className="text-gold-500">·</span> Construction
               </span>
             </div>
           </Reveal>
@@ -141,10 +140,10 @@ export default function AboutPage() {
             </footer>
           </Reveal>
           <Reveal className="order-first lg:order-last lg:col-span-5">
-            <ImagePlaceholder
-              label="Message by the CEO"
-              icon="Users"
-              tone="light"
+            <Photo
+              src="/images/team/ceo-syed-muhammad-ali.jpg"
+              alt="Syed Muhammad Ali, Chief Executive Officer"
+              sizes="(max-width: 1024px) 100vw, 40vw"
               className="aspect-[4/5] w-full rounded-3xl border border-slate-200"
             />
           </Reveal>
@@ -155,10 +154,10 @@ export default function AboutPage() {
       <section className="bg-navy-50/60 py-20 sm:py-28">
         <div className="container-px grid items-center gap-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <ImagePlaceholder
-              label="Message by the Managing Director"
-              icon="Users"
-              tone="navy"
+            <Photo
+              src="/images/team/md-ikram-ul-haq.jpg"
+              alt="Air Vice Marshall Ikram Ul Haq Noor (Retd), Managing Director"
+              sizes="(max-width: 1024px) 100vw, 40vw"
               className="aspect-[4/5] w-full rounded-3xl"
             />
           </Reveal>
@@ -326,28 +325,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CORE TEAM */}
+      {/* BOARD OF DIRECTORS */}
       <section className="bg-navy-50/60 py-20 sm:py-28">
         <div className="container-px">
           <SectionHeading
             align="center"
-            eyebrow="Our People"
-            title="Meet our core leadership & team"
-            description="A multidisciplinary team of qualified engineers, managers and specialists driving every project forward."
+            eyebrow="Our Leadership"
+            title="Board of Directors"
+            description="The leadership steering Wield Developers across its multidisciplinary divisions."
             className="mb-14"
           />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {coreStaff.map((person, i) => (
+            {boardOfDirectors.map((person, i) => (
               <Reveal key={person.name} delay={(i % 4) * 60}>
                 <div className="group flex h-full flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
-                  <div className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-navy-700 to-navy-900 font-display text-xl font-bold text-gold-300">
-                    {person.name
-                      .replace(/^(Engr\.|Dr\.|Air Cdr\.|Syed|Malik)\s/, "")
-                      .split(" ")
-                      .map((n) => n[0])
-                      .slice(0, 2)
-                      .join("")}
-                  </div>
+                  {person.image ? (
+                    <Photo
+                      src={person.image}
+                      alt={`${person.name}, ${person.designation}`}
+                      sizes="64px"
+                      className="h-16 w-16 rounded-full"
+                    />
+                  ) : (
+                    <div className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-navy-700 to-navy-900 font-display text-xl font-bold text-gold-300">
+                      {person.name
+                        .replace(/^(Engr\.|Dr\.|Air Cdr\.|Syed|Malik)\s/, "")
+                        .split(" ")
+                        .map((n) => n[0])
+                        .slice(0, 2)
+                        .join("")}
+                    </div>
+                  )}
                   <h3 className="mt-4 font-display text-sm font-bold text-navy-900">
                     {person.name}
                   </h3>

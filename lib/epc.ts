@@ -160,7 +160,12 @@ export const epcProjects: EpcProject[] = [
       "HSE supervision & safety standards",
       "QA/QC & high-quality workmanship",
     ],
-    gallery: [],
+    gallery: [
+      { src: "/images/prayer-area/prayer-1.png", alt: "Prayer area building with arched façade at Joyland, Rawalpindi" },
+      { src: "/images/prayer-area/prayer-2.png", alt: "Prayer area building with paving and finishing works in progress, Joyland" },
+      { src: "/images/prayer-area/prayer-3.png", alt: "Paved connecting walkway under construction at Joyland" },
+      { src: "/images/prayer-area/prayer-4.png", alt: "Landscaped courtyard and paving around the prayer area, Joyland" },
+    ],
   },
 ];
 

@@ -102,7 +102,7 @@ export const projects: Project[] = [
     category: "Infrastructure",
   },
   {
-    title: "Supply & Installation of Padel Court",
+    title: "Supply & Installation of Paddle Court",
     client: "Olympia, Scheme III, Rawalpindi",
     year: "2023-24",
     status: "Completed",
