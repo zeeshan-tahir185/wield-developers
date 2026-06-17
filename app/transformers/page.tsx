@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Zap, ShieldCheck, CheckCircle2, Factory, Gauge, MapPin } from "lucide-react";
+import { Zap, ShieldCheck, CheckCircle2, Factory, Gauge } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading, Eyebrow } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -11,7 +11,7 @@ import { services } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Transformers & Electrical Services",
   description:
-    "Wield Developers' Power & Electrical division — distribution transformer manufacturing (15 kVA–15,000 kVA), CT & PT production, transformer winding, testing & maintenance, and OCB & VCB repair, at our Karachi facility.",
+    "Wield Developers' Electrical Equipment Manufacturing division — power & distribution transformer manufacturing (15 kVA–15,000 kVA), CT & PT production, transformer winding, testing & diagnostics, and OCB & VCB manufacturing, repair & refurbishment up to 33 kV.",
 };
 
 const capabilities = [
@@ -54,7 +54,9 @@ const galleryPhotos = [
 ];
 
 export default function TransformersPage() {
-  const powerServices = services.filter((s) => s.category === "Power & Electrical");
+  const powerServices = services.filter(
+    (s) => s.category === "Electrical Equipment Manufacturing"
+  );
 
   return (
     <>
@@ -75,18 +77,19 @@ export default function TransformersPage() {
             />
             <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-600">
               <p>
-                As part of our expanding capabilities, Wield Developers operates a
-                dedicated Power &amp; Electrical division manufacturing
-                high-quality distribution transformers, instrument transformers
-                (CT &amp; PT) and transformer windings at our state-of-the-art
-                facility in Karachi.
+                Wield Developers operates a specialised Electrical Equipment
+                Manufacturing Division focused on the design, manufacturing,
+                testing, refurbishment and maintenance of electrical power
+                equipment — including power and distribution transformers,
+                instrument transformers (CT &amp; PT) and transformer windings,
+                produced at our modern manufacturing facilities.
               </p>
               <p>
                 Beyond manufacturing, we provide specialised transformer testing
-                and maintenance services, as well as the manufacturing, repair and
-                overhaul of high-voltage Oil and Vacuum Circuit Breakers (OCB &amp;
-                VCB) — all delivered by skilled technicians in accordance with
-                applicable international standards.
+                and diagnostics, as well as the manufacturing, repair and
+                refurbishment of high-voltage Oil and Vacuum Circuit Breakers (OCB
+                &amp; VCB) up to 33 kV — all delivered by skilled technicians in
+                accordance with applicable international standards.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -95,8 +98,8 @@ export default function TransformersPage() {
                 International standards
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-sm font-semibold text-navy-700">
-                <MapPin className="h-4 w-4 text-gold-500" />
-                Karachi manufacturing facility
+                <Factory className="h-4 w-4 text-gold-500" />
+                Modern manufacturing facilities
               </span>
             </div>
           </Reveal>

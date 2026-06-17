@@ -89,7 +89,7 @@ export function Navbar() {
                           href="/services"
                           className="col-span-2 mt-1 rounded-xl bg-gold-500/10 px-3 py-2 text-center text-sm font-semibold text-gold-300 transition-colors hover:bg-gold-500/20"
                         >
-                          View all 20 services →
+                          View all divisions →
                         </Link>
                       </div>
                     </div>

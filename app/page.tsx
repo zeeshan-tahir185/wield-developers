@@ -11,7 +11,6 @@ import { ButtonLink } from "@/components/ui/Button";
 import { SectionHeading, Eyebrow } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Photo } from "@/components/ui/Photo";
 import { ServiceCard, ProjectCard, StatCard } from "@/components/cards";
 import { CTASection } from "@/components/CTASection";
@@ -46,11 +45,11 @@ export default function HomePage() {
             </h1>
 
             <p className="animate-fade-up mt-6 max-w-xl text-base leading-relaxed text-navy-100/80 sm:text-lg">
-              {site.legalName} is a trusted engineering, construction and
-              electrical services company — delivering transformer manufacturing,
-              renewable energy and civil infrastructure, backed by 100+ engineers
-              and a portfolio spanning transformers, solar, wind, bridges and
-              buildings.
+              {site.legalName} is a multidisciplinary engineering, infrastructure
+              and technology group — delivering integrated solutions across
+              electrical manufacturing, renewable energy, construction, IT &amp;
+              telecom, software and procurement, backed by 100+ engineers and an
+              ISO 9001:2015 certified quality system.
             </p>
 
             <div className="animate-fade-up mt-9 flex flex-col gap-4 sm:flex-row">
@@ -79,8 +78,8 @@ export default function HomePage() {
           <div className="lg:col-span-5">
             <div className="relative">
               <Photo
-                src="/images/transformers/power-transformer.jpg"
-                alt="Power transformer manufactured by Wield Developers"
+                src="/images/high-rise-buildings.jpg"
+                alt="Modern high-rise buildings — engineering & construction by Wield Developers"
                 priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="aspect-[4/5] w-full rounded-3xl border border-navy-700/60 shadow-2xl shadow-navy-950/60"
@@ -120,6 +119,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
             {[
+              "ISO 9001:2015 Certified",
               "Pakistan Engineering Council (PEC)",
               "SECP",
               "FBR",
@@ -142,10 +142,10 @@ export default function HomePage() {
         <div className="container-px grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <div className="relative">
-              <ImagePlaceholder
-                label="Our Team & Worksite"
-                icon="HardHat"
-                tone="light"
+              <Photo
+                src="/images/team/team-1.jpg"
+                alt="Wield Developers site team in safety gear"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="aspect-[5/4] w-full rounded-3xl border border-slate-200"
               />
               <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-navy-900 p-6 text-white shadow-2xl sm:block">
@@ -164,11 +164,11 @@ export default function HomePage() {
               eyebrow="About Wield Developers"
               title={
                 <>
-                  Engineering, construction <br className="hidden sm:block" />
-                  &amp; electrical services
+                  Integrated solutions <br className="hidden sm:block" />
+                  under one roof
                 </>
               }
-              description={`Founded in ${site.foundedYear}, we have built a strong track record in government and private sector projects — delivering reliable, standards-compliant solutions for the power and infrastructure sector.`}
+              description={`Founded in ${site.foundedYear} and incorporated as a Private Limited company in 2025, we have grown into a multidisciplinary group of eight specialised divisions — serving public and private sector clients nationwide.`}
             />
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
@@ -199,11 +199,11 @@ export default function HomePage() {
           <div className="flex flex-col items-end justify-between gap-6 md:flex-row">
             <SectionHeading
               eyebrow="Our Expertise"
-              title="Comprehensive engineering & construction services"
-              description="A diverse range of services backed by advanced machinery, cutting-edge software and a highly qualified team — ensuring precision in every project."
+              title="Eight specialised divisions, one trusted partner"
+              description="From electrical manufacturing and renewable energy to construction, IT & telecom, software and procurement — integrated expertise delivered under one roof."
             />
             <ButtonLink href="/services" variant="ghost" className="shrink-0">
-              All 20 services
+              All divisions
               <ArrowRight className="h-4 w-4" />
             </ButtonLink>
           </div>
@@ -265,10 +265,10 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal delay={120}>
-            <ImagePlaceholder
-              label="Wind & Solar Installations"
-              icon="Wind"
-              tone="navy"
+            <Photo
+              src="/images/solar/solar-2.png"
+              alt="Rooftop solar power system installed by Wield Developers"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="aspect-square w-full rounded-3xl border border-navy-700/60 shadow-2xl"
             />
           </Reveal>
@@ -351,10 +351,10 @@ export default function HomePage() {
           />
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             {[
+              { src: "/images/building/building-1.jpg", alt: "Building under construction" },
+              { src: "/images/solar/solar-1.png", alt: "Rooftop solar power system" },
+              { src: "/images/bridge/bridge-1.jpg", alt: "Bridge construction" },
               { src: "/images/transformers/windings.jpg", alt: "Transformer windings" },
-              { src: "/images/transformers/distribution-transformer.jpg", alt: "Distribution transformer" },
-              { src: "/images/transformers/switchgear-vcb.jpg", alt: "VCB switchgear panels" },
-              { src: "/images/transformers/transformer-workshop.jpg", alt: "Transformer in workshop" },
             ].map((g, i) => (
               <Reveal key={g.src} delay={i * 60}>
                 <Photo

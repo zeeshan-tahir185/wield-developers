@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Target, Compass, Quote, Wrench, CheckCircle2 } from "lucide-react";
+import { Target, Compass, Quote, BadgeCheck } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
-import { SectionHeading, Eyebrow } from "@/components/ui/SectionHeading";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { Photo } from "@/components/ui/Photo";
 import { StatCard } from "@/components/cards";
 import { CTASection } from "@/components/CTASection";
-import { coreStaff, coreValues, milestones, machinery, stats } from "@/lib/company";
+import { coreStaff, coreValues, milestones, stats } from "@/lib/company";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Founded in 2013, Wield Developers (Pvt.) Ltd. is a reputable engineering, construction and electrical services company with 100+ engineers, delivering high-quality infrastructure and power solutions across Pakistan.",
+    "Founded in 2013, Wield Developers (Pvt.) Ltd. is a multidisciplinary engineering, infrastructure, technology and industrial solutions company — an ISO 9001:2015 certified group of eight specialised divisions delivering integrated solutions across Pakistan.",
 };
 
 export default function AboutPage() {
@@ -32,44 +33,57 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Who We Are"
-              title="Engineering, construction & electrical services"
+              title="A multidisciplinary engineering, technology & industrial group"
             />
             <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-600">
               <p>
-                Founded in {site.foundedYear}, Wield Developers (Private) Limited
-                is a reputable engineering, construction and electrical services
-                company with a strong track record in government and private
-                sector projects.
+                Founded in {site.foundedYear} as Wield Engineers, the company
+                built a strong reputation for delivering quality engineering and
+                infrastructure solutions across Pakistan. As part of its continued
+                growth and diversification, the organisation was incorporated in
+                August 2025 as Wield Developers (Private) Limited under the
+                Securities and Exchange Commission of Pakistan.
               </p>
               <p>
-                We specialise in civil works, transformer manufacturing (power and
-                distribution), CT &amp; PT production, transformer testing
-                services, winding fabrication, OCB &amp; VCB repair and
-                maintenance, and renewable energies — delivering reliable,
-                standards-compliant solutions for the power and infrastructure
-                sector.
+                Today, Wield Developers is a multidisciplinary engineering,
+                infrastructure, technology and industrial solutions company serving
+                public and private sector clients nationwide. Through specialised
+                business divisions, we deliver integrated solutions across
+                electrical equipment manufacturing, renewable energy, construction
+                and engineering consultancy, road infrastructure, information
+                technology and telecommunications, software development,
+                procurement and supply chain management, and HSE services.
               </p>
               <p>
-                We are committed to health, safety and environmental (HSE)
-                standards, ensuring the use of certified safety equipment, PPE
-                and strict site safety protocols to maintain safe working
-                environments across all projects and manufacturing operations.
+                Our integrated structure enables us to provide comprehensive
+                end-to-end solutions under one roof, combining the expertise of
+                multiple divisions to support government institutions, utilities,
+                industrial organisations, commercial enterprises and development
+                projects with innovative, cost-effective and sustainable
+                solutions.
               </p>
               <p>
-                Backed by 100+ experienced engineers, technicians and skilled
-                workforce, we maintain efficiency, quality and professionalism in
-                every project. Registered with the Pakistan Engineering Council
-                (PEC), SECP, FBR and RCCI, we continue to deliver trusted,
-                integrated engineering solutions with a commitment to safety,
-                reliability and long-term performance.
+                Our operations are governed by an ISO 9001:2015 Certified Quality
+                Management System, reflecting our commitment to continuous
+                improvement and customer satisfaction. Registered with PEC, SECP,
+                FBR and RCCI, and backed by 100+ experienced engineers, consultants
+                and technical specialists, we remain committed to creating
+                long-term value through technical excellence, integrity and
+                reliable service delivery.
               </p>
+            </div>
+            <div className="mt-7 inline-flex items-center gap-3 rounded-2xl border border-eco-500/30 bg-eco-500/10 px-5 py-3">
+              <BadgeCheck className="h-6 w-6 shrink-0 text-eco-600" />
+              <span className="text-sm font-semibold text-navy-800">
+                ISO 9001:2015 Certified Quality Management System
+              </span>
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <ImagePlaceholder
-              label="Wield Developers HQ"
-              icon="Building2"
-              tone="light"
+            <Photo
+              src="/images/remodeling/office-1.jpg"
+              alt="Wield Developers office interior"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="aspect-[4/3] w-full rounded-3xl border border-slate-200"
             />
           </Reveal>
@@ -86,12 +100,63 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* CEO'S MESSAGE */}
+      <section className="bg-white py-20 sm:py-28">
+        <div className="container-px grid items-center gap-14 lg:grid-cols-12">
+          <Reveal delay={120} className="lg:col-span-7">
+            <Quote className="h-12 w-12 text-gold-400" />
+            <blockquote className="mt-6 space-y-4 text-lg leading-relaxed text-navy-800">
+              <p>
+                &ldquo;Since 2013, Wield Developers (Pvt.) Ltd. has grown into a
+                diversified organisation built on the principles of trust,
+                excellence, innovation and customer satisfaction. What began as an
+                engineering and infrastructure company has evolved into a
+                multidisciplinary enterprise providing integrated solutions across
+                engineering, construction, manufacturing, renewable energy,
+                information technology, telecommunications, software development and
+                HSE services.
+              </p>
+              <p>
+                Our strength lies in our ability to bring together specialised
+                expertise from multiple divisions to deliver comprehensive
+                solutions under one roof. Supported by a highly skilled workforce,
+                modern technologies and robust HSE practices, we consistently
+                deliver reliable solutions that create long-term value for our
+                clients and stakeholders.
+              </p>
+              <p>
+                As we continue to expand our capabilities and embrace emerging
+                opportunities, our focus remains on contributing to national
+                development through integrated, future-ready solutions — building a
+                stronger, smarter and more sustainable future.&rdquo;
+              </p>
+            </blockquote>
+            <footer className="mt-6">
+              <div className="font-display text-lg font-bold text-navy-900">
+                Syed Muhammad Ali
+              </div>
+              <div className="text-sm text-slate-500">
+                Chief Executive Officer, {site.legalName}
+              </div>
+            </footer>
+          </Reveal>
+          <Reveal className="order-first lg:order-last lg:col-span-5">
+            <ImagePlaceholder
+              label="Message by the CEO"
+              icon="Users"
+              tone="light"
+              className="aspect-[4/5] w-full rounded-3xl border border-slate-200"
+            />
+          </Reveal>
+        </div>
+      </section>
+
       {/* DIRECTOR'S MESSAGE */}
       <section className="bg-navy-50/60 py-20 sm:py-28">
         <div className="container-px grid items-center gap-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <ImagePlaceholder
-              label="Message by the Director"
+              label="Message by the Managing Director"
               icon="Users"
               tone="navy"
               className="aspect-[4/5] w-full rounded-3xl"
@@ -101,32 +166,36 @@ export default function AboutPage() {
             <Quote className="h-12 w-12 text-gold-400" />
             <blockquote className="mt-6 space-y-4 text-lg leading-relaxed text-navy-800">
               <p>
-                &ldquo;Since 2013, Wield Developers (Pvt.) Ltd. has been built on
-                a foundation of trust, excellence and innovation. We have
-                successfully delivered a diverse portfolio of projects including
-                civil infrastructure, solar energy solutions, wind mill
-                installation, transformer manufacturing (power and distribution),
-                CT &amp; PT manufacturing, electrical testing services, and OCB
-                &amp; VCB repair and maintenance.
+                &ldquo;Since 2013, Wield Developers (Pvt.) Ltd. has been built on a
+                foundation of trust, excellence and innovation. Over the years, we
+                have successfully delivered a diverse range of projects in civil
+                infrastructure, renewable energy, power systems, transformer
+                manufacturing, electrical testing services, IT &amp; telecom
+                services, software development and specialised maintenance
+                solutions.
               </p>
               <p>
-                Our expertise has expanded into modern engineering systems and
-                specialised structures such as high-rise watch towers and
-                strategic installations for security, surveillance and industrial
-                applications. We are also actively contributing to renewable and
-                power infrastructure development with a focus on efficiency and
-                sustainability.
+                Our expertise has expanded into modern engineering systems,
+                high-rise watch towers, strategic security installations and
+                critical infrastructure projects that support national development.
+                Drawing upon more than four decades of leadership, strategic
+                planning and organisational management experience gained during my
+                career in the Pakistan Air Force, I firmly believe that lasting
+                success is achieved through professionalism, innovation and an
+                unwavering commitment to excellence.
               </p>
               <p>
-                Backed by a highly skilled team, advanced technologies and strong
-                HSE practices, we ensure precision, safety and reliability in
-                every project — delivering sustainable engineering solutions that
-                support national development.&rdquo;
+                Supported by a highly skilled team, advanced technologies and
+                strong HSE practices, we deliver engineering solutions with
+                precision, safety and efficiency. As we continue to grow, our focus
+                remains on providing sustainable, future-ready solutions that create
+                value for our clients and contribute positively to the nation&apos;s
+                progress.&rdquo;
               </p>
             </blockquote>
             <footer className="mt-6">
               <div className="font-display text-lg font-bold text-navy-900">
-                AVM Ikram Ul Haq
+                Air Vice Marshall Ikram Ul Haq Noor, SI(M)(Retd)
               </div>
               <div className="text-sm text-slate-500">
                 Managing Director, {site.legalName}
@@ -148,11 +217,13 @@ export default function AboutPage() {
                 Our Vision
               </h3>
               <p className="mt-4 leading-relaxed text-slate-600">
-                To be a leading construction firm recognised for excellence,
-                reliability and innovation. We aspire to expand our reach, embrace
-                modern engineering practices and construction technologies, and
-                play a key role in shaping the future of power and infrastructure
-                — upholding integrity in all our projects.
+                To be a leading multidisciplinary enterprise recognised for
+                delivering integrated engineering, infrastructure, technology and
+                industrial solutions under one roof. We aspire to create lasting
+                value through innovation, collaboration and operational excellence
+                — leveraging the collective strength of our specialised divisions
+                to meet the evolving needs of our clients and contribute to
+                sustainable national development.
               </p>
             </div>
           </Reveal>
@@ -165,11 +236,13 @@ export default function AboutPage() {
                 Our Mission
               </h3>
               <p className="mt-4 leading-relaxed text-slate-600">
-                To deliver high-quality, sustainable and innovative engineering
-                and construction solutions that exceed client expectations. We are committed to the
-                highest standards of professionalism, efficiency and safety while
-                contributing to the nation&apos;s infrastructure development —
-                creating structures that stand the test of time.
+                To provide comprehensive, reliable and future-ready solutions
+                through a unified network of specialised departments working
+                seamlessly together. By combining expertise in engineering,
+                construction, manufacturing, renewable energy, information
+                technology, telecommunications, software development and HSE
+                services, we deliver end-to-end solutions that maximise efficiency,
+                quality and value for our clients.
               </p>
             </div>
           </Reveal>
@@ -286,49 +359,6 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* MACHINERY */}
-      <section className="bg-white py-20 sm:py-28">
-        <div className="container-px grid items-center gap-14 lg:grid-cols-2">
-          <Reveal>
-            <Eyebrow>Our Resources</Eyebrow>
-            <h2 className="mt-5 font-display text-3xl font-bold text-navy-900 sm:text-4xl">
-              Equipped with the latest machinery
-            </h2>
-            <p className="mt-5 leading-relaxed text-slate-600">
-              Wield Developers is fully equipped with the latest machinery,
-              industry-leading software and a team of highly qualified
-              professionals to execute projects of any scale with precision.
-              Project-specific machinery can be hired as per requirement.
-            </p>
-            <div className="mt-8 grid gap-x-6 gap-y-3 sm:grid-cols-2">
-              {machinery.map((m) => (
-                <div key={m} className="flex items-center gap-2.5 text-sm text-slate-700">
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-eco-500" />
-                  {m}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <div className="relative">
-              <ImagePlaceholder
-                label="Machinery & Equipment Fleet"
-                icon="Construction"
-                tone="navy"
-                className="aspect-[4/3] w-full rounded-3xl"
-              />
-              <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-gold-500 p-5 text-navy-950 shadow-2xl sm:flex sm:items-center sm:gap-3">
-                <Wrench className="h-8 w-8" />
-                <div>
-                  <div className="font-display text-lg font-bold">Heavy Fleet</div>
-                  <div className="text-xs font-medium">Owned &amp; project-hired</div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
 

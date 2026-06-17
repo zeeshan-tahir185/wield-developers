@@ -15,9 +15,9 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo light />
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-navy-100/70">
-              {site.legalName} — a trusted contractor and construction firm
-              delivering civil infrastructure, renewable energy and specialised
-              engineering solutions across Pakistan since {site.foundedYear}.
+              {site.legalName} — an ISO 9001:2015 certified multidisciplinary
+              group delivering integrated engineering, manufacturing, technology
+              and infrastructure solutions across Pakistan since {site.foundedYear}.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {site.registrations.map((r) => (

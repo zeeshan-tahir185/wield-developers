@@ -55,7 +55,7 @@ export const stats = [
   { value: "2013", label: "Established", suffix: "" },
   { value: "100", label: "Engineers & Staff", suffix: "+" },
   { value: "225", label: "Wind Mills Installed", suffix: "" },
-  { value: "20", label: "Specialised Services", suffix: "+" },
+  { value: "8", label: "Business Divisions", suffix: "" },
 ];
 
 export const milestones = [
@@ -85,28 +85,8 @@ export const milestones = [
   },
   {
     year: "2025–26",
-    title: "Power & Electrical Division",
+    title: "A Multidisciplinary Group",
     description:
-      "Expanded into transformer manufacturing (power & distribution), CT & PT production, winding, testing and OCB & VCB services at our Karachi facility.",
+      "Expanded into a multidisciplinary enterprise of eight specialised divisions — adding electrical equipment manufacturing, IT & telecommunications, software development and procurement & supply chain solutions.",
   },
-];
-
-// Machinery & equipment fleet (from the profile's machinery details).
-export const machinery = [
-  "Mixture Machines",
-  "Vibrators",
-  "Tractors with Trolleys",
-  "Plate Compactors",
-  "Excavators",
-  "Dampers",
-  "Shehzore & Water Bowser",
-  "Loader Tractors",
-  "Shuttering (Steel & Wooden)",
-  "Tubular Scaffolding",
-  "Solar Panels & Solar Pumps",
-  "Water Pumps",
-  "Wheel Barrows",
-  "Wench Lift Machines",
-  "Electric Generators",
-  "Electric Welding Plants",
 ];

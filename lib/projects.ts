@@ -1,4 +1,4 @@
-// Completed & ongoing projects from the company's Past Performance record.
+// Completed & ongoing projects from the 2026 Company Profile's "Our Projects" list.
 
 export type Project = {
   title: string;
@@ -11,8 +11,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     title:
-      "Feasibility, Design, Supply, Installation & Commissioning of 1.4 MW On-Grid Solar System",
-    client: "SCO HQ, Rawalpindi",
+      "Feasibility, Design, Supply, Installation & Commissioning of 1.4 MW On-Grid Net Metering Solar System",
+    client: "Qasim Mkt, Rawalpindi",
     year: "Ongoing",
     status: "Ongoing",
     category: "Solar",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
   },
   {
     title: "Construction & Renovation of Building Complex",
-    client: "64 Signals, Mirpur",
+    client: "Mirpur, Azad Kashmir",
     year: "Ongoing",
     status: "Ongoing",
     category: "Buildings",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
   },
   {
     title: "Supply & Laying of 30-pair and 50-pair Telephone Cable",
-    client: "Top Biz LLP (PAC Kamra)",
+    client: "Top Biz LLP, Kamra",
     year: "Ongoing",
     status: "Ongoing",
     category: "Infrastructure",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
   },
   {
     title: "Construction of Jogging Track",
-    client: "Mars International (SCO)",
+    client: "Mars International, Rawalpindi",
     year: "2024-25",
     status: "Completed",
     category: "Sports",
@@ -81,11 +81,46 @@ export const projects: Project[] = [
     category: "Wind",
   },
   {
+    title: "Installation & Commissioning of Passenger Lift",
+    client: "M.A-Edu Consultants, Rawalpindi",
+    year: "2024-25",
+    status: "Completed",
+    category: "Other",
+  },
+  {
+    title: "Supply & Installation of Passenger and Vehicular RPM at Lahore, Peshawar & Quetta Airports",
+    client: "Top Biz LLP",
+    year: "2023-24",
+    status: "Completed",
+    category: "Infrastructure",
+  },
+  {
+    title: "Supply & Installation of Vehicular RPM at Port Qasim",
+    client: "Top Biz LLP",
+    year: "2023-24",
+    status: "Completed",
+    category: "Infrastructure",
+  },
+  {
+    title: "Supply & Installation of Padel Court",
+    client: "Olympia, Scheme III, Rawalpindi",
+    year: "2023-24",
+    status: "Completed",
+    category: "Sports",
+  },
+  {
     title: "Infrastructure Development of Bismillah Orchards",
     client: "Bismillah Orchard, Faisalabad",
     year: "2022-24",
     status: "Completed",
     category: "Infrastructure",
+  },
+  {
+    title: "Repair of Machineries of E&M Workshop Division",
+    client: "E&M Workshop Division, Quetta",
+    year: "2022-23",
+    status: "Completed",
+    category: "Other",
   },
   {
     title: "EPDM Jogging Track — EPDM PU System",
@@ -97,7 +132,7 @@ export const projects: Project[] = [
   {
     title: "Laying of Sewage System of Block A, B, C",
     client: "Bismillah Orchard, Faisalabad",
-    year: "2021-22",
+    year: "—",
     status: "Completed",
     category: "Infrastructure",
   },

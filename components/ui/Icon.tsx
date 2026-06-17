@@ -33,6 +33,8 @@ import {
   Settings,
   Cable,
   PlugZap,
+  Code2,
+  Truck,
   type LucideIcon,
 } from "lucide-react";
 
@@ -68,6 +70,8 @@ const iconMap: Record<string, LucideIcon> = {
   Settings,
   Cable,
   PlugZap,
+  Code2,
+  Truck,
 };
 
 export function Icon({

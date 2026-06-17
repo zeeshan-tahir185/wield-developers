@@ -6,9 +6,9 @@ import { CTASection } from "@/components/CTASection";
 import { services, serviceCategories } from "@/lib/services";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Our Expertise",
   description:
-    "Explore 20 specialised services from Wield Developers — transformer manufacturing, CT & PT, wind & solar energy, road and bridge construction, building, HSE and more.",
+    "Explore Wield Developers' eight specialised divisions — electrical equipment manufacturing, renewable energy, construction & engineering, road infrastructure, IT & telecommunications, software development, procurement & supply chain, and HSE services.",
 };
 
 export default function ServicesPage() {
@@ -16,8 +16,8 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Our Expertise"
-        title="Engineering & construction services"
-        description="A diverse range of services backed by advanced machinery, cutting-edge software and a highly qualified team — ensuring precision, efficiency and excellence in every project."
+        title="Eight specialised divisions, one trusted group"
+        description="Wield Developers delivers integrated end-to-end solutions across electrical manufacturing, renewable energy, construction, road infrastructure, IT & telecom, software, procurement and HSE — combining the expertise of multiple divisions under one roof."
         crumbs={[{ label: "Services" }]}
       />
 

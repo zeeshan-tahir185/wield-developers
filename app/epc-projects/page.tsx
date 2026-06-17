@@ -12,7 +12,7 @@ import { epcProjects } from "@/lib/epc";
 export const metadata: Metadata = {
   title: "EPC Projects",
   description:
-    "Turnkey EPC (Engineering, Procurement & Construction) projects by Wield Developers — solar and wind energy systems and civil construction works delivered from feasibility to commissioning.",
+    "Turnkey EPC (Engineering, Procurement & Construction) projects by Wield Developers — on-grid solar power systems and civil construction works delivered from feasibility and design through to commissioning.",
 };
 
 export default function EpcProjectsPage() {
@@ -20,8 +20,8 @@ export default function EpcProjectsPage() {
     <>
       <PageHero
         eyebrow="EPC Projects"
-        title="Turnkey energy projects, end to end"
-        description="Engineering, Procurement & Construction — we deliver complete projects from feasibility and design through procurement, construction and commissioning, across energy systems and civil infrastructure."
+        title="Turnkey projects, end to end"
+        description="Engineering, Procurement & Construction — we deliver complete projects from feasibility and design through procurement, construction and commissioning, across solar energy and civil infrastructure."
         crumbs={[{ label: "EPC Projects" }]}
       />
 

@@ -6,7 +6,7 @@ export const site = {
   legalName: "Wield Developers (Pvt.) Ltd.",
   tagline: "Engineering a Smarter, Stronger, Sustainable Future",
   description:
-    "Wield Developers (Pvt.) Ltd. is a Rawalpindi-based engineering, construction and electrical services company delivering transformer manufacturing, CT & PT production, civil infrastructure, renewable energy and specialised engineering solutions across Pakistan since 2013.",
+    "Wield Developers (Pvt.) Ltd. is a Rawalpindi-based, ISO 9001:2015 certified multidisciplinary group delivering integrated solutions across electrical equipment manufacturing, renewable energy, construction & engineering, road infrastructure, IT & telecommunications, software development, procurement and HSE services across Pakistan since 2013.",
   foundedYear: 2013,
   url: "https://www.wielddevelopers.com",
   contact: {
