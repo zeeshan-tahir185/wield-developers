@@ -12,13 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  const ongoing = projects.filter((p) => p.status === "Ongoing").length;
-  const completed = projects.filter((p) => p.status === "Completed").length;
-
   const projectStats = [
-    { value: String(projects.length), label: "Total Projects", suffix: "+" },
-    { value: String(ongoing), label: "Ongoing", suffix: "" },
-    { value: String(completed), label: "Completed", suffix: "+" },
+    { value: String(projects.length), label: "Projects Delivered", suffix: "+" },
+    { value: "8", label: "Business Divisions", suffix: "" },
     { value: "20+", label: "Years of Delivery", suffix: "" },
   ];
 
@@ -34,7 +30,7 @@ export default function ProjectsPage() {
       {/* STATS */}
       <section className="relative overflow-hidden bg-gradient-to-r from-navy-900 to-navy-800 py-14">
         <div className="bg-blueprint absolute inset-0 opacity-40" />
-        <div className="container-px relative grid grid-cols-2 gap-10 lg:grid-cols-4">
+        <div className="container-px relative grid grid-cols-1 gap-10 sm:grid-cols-3">
           {projectStats.map((s) => (
             <StatCard key={s.label} value={s.value} label={s.label} suffix={s.suffix} />
           ))}

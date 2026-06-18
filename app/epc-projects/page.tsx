@@ -29,7 +29,7 @@ export default function EpcProjectsPage() {
         <div className="container-px">
           <SectionHeading
             eyebrow="Our EPC Portfolio"
-            title="Delivered & ongoing EPC projects"
+            title="Delivered EPC projects"
             description="This portfolio keeps growing — every project includes full descriptions and a photo gallery that we update as work progresses."
             className="mb-12"
           />
@@ -90,7 +90,7 @@ export default function EpcProjectsPage() {
                 Looking for our full track record?
               </h3>
               <p className="mt-1 text-sm text-slate-600">
-                Browse all completed and ongoing projects across every sector.
+                Browse all our completed projects across every sector.
               </p>
             </div>
             <ButtonLink href="/projects" variant="secondary" className="shrink-0">

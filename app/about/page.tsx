@@ -71,12 +71,6 @@ export default function AboutPage() {
                 reliable service delivery.
               </p>
             </div>
-            <div className="mt-7 inline-flex items-center gap-3 rounded-2xl border border-gold-500/30 bg-gold-500/10 px-5 py-3">
-              <span className="text-sm font-bold uppercase tracking-wider text-navy-800">
-                Engineering <span className="text-gold-500">·</span> Procurement{" "}
-                <span className="text-gold-500">·</span> Construction
-              </span>
-            </div>
           </Reveal>
           <Reveal delay={120}>
             <Photo
@@ -92,10 +86,19 @@ export default function AboutPage() {
       {/* STATS */}
       <section className="relative overflow-hidden bg-gradient-to-r from-navy-900 to-navy-800 py-16">
         <div className="bg-blueprint absolute inset-0 opacity-40" />
-        <div className="container-px relative grid grid-cols-2 gap-10 lg:grid-cols-4">
-          {stats.map((s) => (
-            <StatCard key={s.label} value={s.value} label={s.label} suffix={s.suffix} />
-          ))}
+        <div className="container-px relative">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center font-display text-xl font-bold uppercase tracking-[0.18em] text-white sm:text-2xl lg:text-3xl">
+            <span>Engineering</span>
+            <span className="text-gold-400">·</span>
+            <span>Procurement</span>
+            <span className="text-gold-400">·</span>
+            <span>Construction</span>
+          </div>
+          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-10 border-t border-navy-700/60 pt-12 sm:grid-cols-3">
+            {stats.map((s) => (
+              <StatCard key={s.label} value={s.value} label={s.label} suffix={s.suffix} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -362,7 +365,6 @@ export default function AboutPage() {
                   <p className="mt-1 text-xs font-semibold text-gold-600">
                     {person.designation}
                   </p>
-                  <p className="mt-1 text-xs text-slate-400">{person.qualification}</p>
                 </div>
               </Reveal>
             ))}

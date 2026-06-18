@@ -12,15 +12,15 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
 import { Photo } from "@/components/ui/Photo";
-import { DivisionCard, ProjectCard, StatCard } from "@/components/cards";
+import { DivisionCard, ProjectCard } from "@/components/cards";
 import { CTASection } from "@/components/CTASection";
 import { divisions } from "@/lib/services";
 import { projects } from "@/lib/projects";
-import { stats, coreValues } from "@/lib/company";
+import { coreValues } from "@/lib/company";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
-  const featuredProjects = projects.filter((p) => p.status === "Ongoing").slice(0, 6);
+  const featuredProjects = projects.slice(0, 6);
 
   return (
     <>
@@ -61,7 +61,7 @@ export default function HomePage() {
               </ButtonLink>
             </div>
 
-            <div className="animate-fade-up mt-12 flex max-w-lg flex-wrap items-center gap-x-3 gap-y-2 border-t border-navy-800 pt-8 font-display text-sm font-bold uppercase tracking-[0.2em] text-white sm:text-base">
+            <div className="animate-fade-up mt-12 flex flex-wrap items-center gap-x-2 gap-y-2 border-t border-navy-800 pt-8 font-display text-sm font-bold uppercase tracking-[0.15em] text-white sm:text-base">
               <span>Engineering</span>
               <span className="text-gold-400">·</span>
               <span>Procurement</span>
@@ -210,13 +210,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ============ STATS BAND ============ */}
+      {/* ============ EPC BAND ============ */}
       <section className="relative overflow-hidden bg-gradient-to-r from-navy-900 to-navy-800 py-16">
         <div className="bg-blueprint absolute inset-0 opacity-40" />
-        <div className="container-px relative grid grid-cols-2 gap-10 lg:grid-cols-4">
-          {stats.map((s) => (
-            <StatCard key={s.label} value={s.value} label={s.label} suffix={s.suffix} />
-          ))}
+        <div className="container-px relative flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center font-display text-xl font-bold uppercase tracking-[0.18em] text-white sm:text-2xl lg:text-3xl">
+          <span>Engineering</span>
+          <span className="text-gold-400">·</span>
+          <span>Procurement</span>
+          <span className="text-gold-400">·</span>
+          <span>Construction</span>
         </div>
       </section>
 
@@ -256,8 +258,8 @@ export default function HomePage() {
           <SectionHeading
             align="center"
             eyebrow="Past Performance"
-            title="Projects currently in progress"
-            description="A snapshot of the ongoing work delivering value to clients across Pakistan."
+            title="Recent project highlights"
+            description="A snapshot of the work we deliver for clients across Pakistan."
             className="mb-14"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

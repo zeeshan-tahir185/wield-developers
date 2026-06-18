@@ -86,13 +86,13 @@ export const galleryCategories: GalleryCategory[] = [
   },
   {
     slug: "prayer-area-bridge-joyland",
-    title: "Construction of Prayer Area Building & Connecting Bridge, Joyland",
+    title: "Construction of Misc Business Complex, Joyland",
     count: 4,
     images: [
-      { src: "/images/prayer-area/prayer-1.png", alt: "Prayer area building with arched façade at Joyland, Rawalpindi" },
-      { src: "/images/prayer-area/prayer-2.png", alt: "Prayer area building with paving and finishing works in progress, Joyland" },
-      { src: "/images/prayer-area/prayer-3.png", alt: "Paved connecting walkway under construction at Joyland" },
-      { src: "/images/prayer-area/prayer-4.png", alt: "Landscaped courtyard and paving around the prayer area, Joyland" },
+      { src: "/images/prayer-area/prayer-1.png", alt: "Business complex building with arched façade at Joyland, Rawalpindi" },
+      { src: "/images/prayer-area/prayer-2.png", alt: "Business complex building with paving and finishing works in progress, Joyland" },
+      { src: "/images/prayer-area/prayer-3.png", alt: "Paved connecting walkway around the business complex at Joyland" },
+      { src: "/images/prayer-area/prayer-4.png", alt: "Landscaped courtyard and paving around the business complex, Joyland" },
     ],
   },
   {
@@ -119,7 +119,18 @@ export const galleryCategories: GalleryCategory[] = [
       { src: "/images/ofc-cable/ofc-3.png", alt: "Workers laying OFC cable in a roadside median" },
     ],
   },
-  { slug: "watch-tower", title: "Watch Tower Construction", count: 4 },
+  {
+    slug: "watch-tower",
+    title: "Watch Tower Construction",
+    count: 5,
+    images: [
+      { src: "/images/watch-tower/watch-tower-1.png", alt: "Completed rendered surveillance watch tower with observation cabin and perimeter security fencing" },
+      { src: "/images/watch-tower/watch-tower-2.png", alt: "Concrete surveillance watch tower with railing platform and antenna mast" },
+      { src: "/images/watch-tower/watch-tower-3.png", alt: "Steel-framed watch tower with observation cabin overlooking open terrain" },
+      { src: "/images/watch-tower/watch-tower-4.png", alt: "Watch tower under construction with scaffolding and rooftop surveillance dome" },
+      { src: "/images/watch-tower/watch-tower-5.png", alt: "Close-up of watch tower observation cabin with mounted surveillance equipment" },
+    ],
+  },
   {
     slug: "bridge",
     title: "Bridge Design & Construction",
@@ -156,7 +167,38 @@ export const galleryCategories: GalleryCategory[] = [
       { src: "/images/remodeling/office-3.jpg", alt: "Completed wood-panelled interior with recessed lighting" },
     ],
   },
-  { slug: "sports", title: "Sports Infrastructure Development", count: 4 },
-  { slug: "lifts", title: "Passenger Lifts Installation & Commissioning", count: 3 },
-  { slug: "farmhouses-karor", title: "Design & Construction of Farm Houses, Kotli Sattian", count: 4 },
+  {
+    slug: "sports",
+    title: "Sports Infrastructure Development",
+    count: 4,
+    images: [
+      { src: "/images/sports/sports-1.png", alt: "Completed glass-and-mesh padel court with floodlit synthetic turf at dusk" },
+      { src: "/images/sports/sports-2.png", alt: "Padel court steel and mesh enclosure under construction on a paved deck" },
+      { src: "/images/sports/sports-3.png", alt: "Padel court structures being erected at a multi-court sports facility" },
+      { src: "/images/sports/sports-4.png", alt: "Row of padel courts with synthetic turf under construction" },
+    ],
+  },
+  {
+    slug: "lifts",
+    title: "Passenger Lifts Installation & Commissioning",
+    count: 4,
+    images: [
+      { src: "/images/lifts/lift-1.png", alt: "Stainless steel passenger lift doors with call panel in a building lobby" },
+      { src: "/images/lifts/lift-2.png", alt: "Passenger lift cabin interior with mirrored stainless steel walls and marble floor" },
+      { src: "/images/lifts/lift-3.png", alt: "Lift traction machine and motor installed in the machine room" },
+      { src: "/images/lifts/lift-4.png", alt: "Lift traction machinery and sheave at the top of the elevator shaft" },
+    ],
+  },
+  {
+    slug: "farmhouses-karor",
+    title: "Design & Construction of Farm Houses, Kotli Sattian",
+    count: 5,
+    images: [
+      { src: "/images/farmhouses/farmhouse-1.png", alt: "Architectural render of A-frame farm house villas, Kotli Sattian" },
+      { src: "/images/farmhouses/farmhouse-2.png", alt: "Farm house living room interior with timber ceiling and modern furnishings" },
+      { src: "/images/farmhouses/farmhouse-3.png", alt: "Farm house mezzanine loft with timber ceiling and triangular feature window" },
+      { src: "/images/farmhouses/farmhouse-4.png", alt: "Farm house lounge with feature TV wall and timber-clad ceiling" },
+      { src: "/images/farmhouses/farmhouse-5.png", alt: "Modern farm house bedroom interior with feature lighting" },
+    ],
+  },
 ];

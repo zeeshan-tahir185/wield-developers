@@ -280,6 +280,10 @@ export const services: Service[] = [
       "Imported premium surfacing",
       "Drainage, lighting & equipment",
     ],
+    image: {
+      src: "/images/sports/sports-1.png",
+      alt: "Completed glass-and-mesh padel court with floodlit synthetic turf at dusk",
+    },
   },
   {
     slug: "lifts-elevators",
@@ -298,6 +302,10 @@ export const services: Service[] = [
       "European & Chinese OEM equipment",
       "International safety standards",
     ],
+    image: {
+      src: "/images/lifts/lift-2.png",
+      alt: "Passenger lift cabin interior with mirrored stainless steel walls and marble floor",
+    },
   },
   {
     slug: "project-management",

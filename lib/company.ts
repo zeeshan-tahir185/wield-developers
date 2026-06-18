@@ -36,10 +36,10 @@ export const boardOfDirectors: {
   designation: string;
   image?: string;
 }[] = [
-  { name: "Muhammad Faisal Mureed", qualification: "MBA", designation: "Chief Financial Officer", image: "/images/team/cfo-faisal-mureed.jpg" },
-  { name: "Air Vice Marshall Ikram Ul Haq Noor (Retd)", qualification: "SI(M), PAF", designation: "Director Marketing", image: "/images/team/md-ikram-ul-haq.jpg" },
-  { name: "Naeem Feroze", qualification: "MBA", designation: "Chief Operating Officer", image: "/images/team/coo-naeem-feroze.jpg" },
   { name: "Syed Muhammad Ali", qualification: "BBA", designation: "Chief Executive Officer", image: "/images/team/ceo-syed-muhammad-ali.jpg" },
+  { name: "Air Vice Marshall Ikram Ul Haq Noor (Retd)", qualification: "SI(M), PAF", designation: "Managing Director", image: "/images/team/md-ikram-ul-haq.jpg" },
+  { name: "Naeem Feroze", qualification: "MBA", designation: "Chief Operating Officer", image: "/images/team/coo-naeem-feroze.jpg" },
+  { name: "Muhammad Faisal Mureed", qualification: "MBA", designation: "Chief Financial Officer", image: "/images/team/cfo-faisal-mureed.jpg" },
 ];
 
 export const coreValues = [
