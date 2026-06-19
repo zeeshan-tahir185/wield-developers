@@ -5,9 +5,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
 import { Photo } from "@/components/ui/Photo";
-import { StatCard } from "@/components/cards";
 import { CTASection } from "@/components/CTASection";
-import { boardOfDirectors, coreValues, milestones, stats } from "@/lib/company";
+import { boardOfDirectors, coreValues, milestones } from "@/lib/company";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -94,11 +93,6 @@ export default function AboutPage() {
             <span className="text-gold-400">·</span>
             <span>Construction</span>
           </div>
-          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-10 border-t border-navy-700/60 pt-12 sm:grid-cols-3">
-            {stats.map((s) => (
-              <StatCard key={s.label} value={s.value} label={s.label} suffix={s.suffix} />
-            ))}
-          </div>
         </div>
       </section>
 
@@ -168,36 +162,46 @@ export default function AboutPage() {
             <Quote className="h-12 w-12 text-gold-400" />
             <blockquote className="mt-6 space-y-4 text-lg leading-relaxed text-navy-800">
               <p>
-                &ldquo;Since 2013, Wield Developers (Pvt.) Ltd. has been built on a
-                foundation of trust, excellence and innovation. Over the years, we
-                have successfully delivered a diverse range of projects in civil
-                infrastructure, renewable energy, power systems, transformer
-                manufacturing, electrical testing services, IT &amp; telecom
-                services, software development and specialised maintenance
-                solutions.
+                &ldquo;Since 2013, Wield Developers (Pvt.) Ltd. has evolved into a
+                diversified engineering and technology enterprise, founded on the
+                principles of integrity, excellence and innovation. Over the years,
+                we have built a strong reputation for delivering complex,
+                high-impact projects across civil infrastructure, renewable energy,
+                integrated power and energy solutions, information technology,
+                telecommunications and software development.
               </p>
               <p>
-                Our expertise has expanded into modern engineering systems,
-                high-rise watch towers, strategic security installations and
-                critical infrastructure projects that support national development.
-                Drawing upon more than four decades of leadership, strategic
-                planning and organisational management experience gained during my
-                career in the Pakistan Air Force, I firmly believe that lasting
-                success is achieved through professionalism, innovation and an
-                unwavering commitment to excellence.
+                Our core capabilities span the full spectrum of engineering and
+                technical services, with a strong focus on integrated power and
+                energy solutions, including generation systems, transformer
+                manufacturing, electrical testing, commissioning and lifecycle
+                maintenance. Beyond this, we deliver advanced engineering systems,
+                strategic security infrastructure, high-rise surveillance
+                installations and other mission-critical projects that support
+                national infrastructure development. Through disciplined execution,
+                modern technology and engineering precision, we ensure solutions
+                that are reliable, scalable and performance-driven.
               </p>
               <p>
-                Supported by a highly skilled team, advanced technologies and
-                strong HSE practices, we deliver engineering solutions with
-                precision, safety and efficiency. As we continue to grow, our focus
-                remains on providing sustainable, future-ready solutions that create
-                value for our clients and contribute positively to the nation&apos;s
-                progress.&rdquo;
+                The strategic direction of the company is guided by over four
+                decades of leadership, organisational management and strategic
+                planning experience gained during my service in the Pakistan Air
+                Force. This legacy of discipline, professionalism and accountability
+                continues to define our corporate culture and operational standards.
+              </p>
+              <p>
+                Supported by a highly skilled workforce, a strong commitment to
+                Health, Safety and Environment (HSE) excellence, and a culture of
+                continuous innovation, Wield Developers delivers sustainable
+                solutions that create long-term value for clients and stakeholders.
+                We remain focused on strengthening national infrastructure,
+                advancing technological capability and fostering enduring
+                partnerships built on trust, performance and shared success.&rdquo;
               </p>
             </blockquote>
             <footer className="mt-6">
               <div className="font-display text-lg font-bold text-navy-900">
-                Air Vice Marshall Ikram Ul Haq Noor, SI(M)(Retd)
+                Air Vice Marshal Ikram-ul-Haq Noor, SI(M) (Retd.)
               </div>
               <div className="text-sm text-slate-500">
                 Managing Director, {site.legalName}

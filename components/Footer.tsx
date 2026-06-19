@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Mail, Phone, MapPin, Smartphone } from "lucide-react";
 import { Logo } from "./Logo";
 import { navLinks, site } from "@/lib/site";
-import { services } from "@/lib/services";
+import { divisions } from "@/lib/services";
 
 export function Footer() {
   return (
@@ -50,19 +50,19 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Divisions */}
           <div className="lg:col-span-3">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Services
+              Divisions
             </h3>
             <ul className="mt-5 space-y-3 text-sm">
-              {services.slice(0, 7).map((s) => (
-                <li key={s.slug}>
+              {divisions.map((d) => (
+                <li key={d.slug}>
                   <Link
-                    href={`/services/${s.slug}`}
+                    href={`/services#${d.slug}`}
                     className="text-navy-100/70 transition-colors hover:text-gold-300"
                   >
-                    {s.title}
+                    {d.name}
                   </Link>
                 </li>
               ))}

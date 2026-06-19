@@ -64,7 +64,7 @@ export default function TransformersPage() {
         eyebrow="Power & Electrical Division"
         title="Transformers & Electrical Services"
         description="Complete, standards-compliant power solutions — from distribution transformer manufacturing and CT & PT production to winding, testing, maintenance and circuit-breaker services."
-        crumbs={[{ label: "Transformers & Electrical" }]}
+        crumbs={[{ label: "Manufacturing Facility" }]}
       />
 
       {/* INTRO */}

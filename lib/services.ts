@@ -194,6 +194,10 @@ export const services: Service[] = [
       "Renewable energy project management",
     ],
     toolset: ["WAsP", "WindPRO", "LiDAR", "ArcGIS", "QGIS", "STAAD.Pro", "ETABS"],
+    image: {
+      src: "/images/wind/wind-1.jpg",
+      alt: "Wind turbines generating power across a field at sunset",
+    },
   },
 
   // ───────────────── Construction, Design & Engineering Consultancy ─────────────────
@@ -239,6 +243,10 @@ export const services: Service[] = [
       "Structural analysis & durability assessment",
     ],
     toolset: ["SAP2000", "MIDAS Civil", "Bentley OpenBridge Designer"],
+    image: {
+      src: "/images/infrastructure/infra-1.jpg",
+      alt: "Excavator carrying out foundation earthworks for an infrastructure project",
+    },
   },
   {
     slug: "bridge-construction",
@@ -326,6 +334,10 @@ export const services: Service[] = [
       "Transparent reporting",
     ],
     toolset: ["Primavera P6", "Microsoft Project", "BIM 360"],
+    image: {
+      src: "/images/project-management/master-plan-1.jpg",
+      alt: "Project master-plan layout board on a construction site",
+    },
   },
   {
     slug: "quality-assurance-control",
@@ -345,6 +357,10 @@ export const services: Service[] = [
       "QA/QC protocols & standards compliance",
     ],
     toolset: ["Primavera P6", "PlanSwift", "Bluebeam Revu", "CostX"],
+    image: {
+      src: "/images/quality/qa-1.jpg",
+      alt: "Building interior under construction during a quality inspection",
+    },
   },
 
   // ───────────────────────── Road Infrastructure Development ─────────────────────────
@@ -424,6 +440,10 @@ export const services: Service[] = [
       "Cloud-based platforms",
       "System integration & technical support",
     ],
+    image: {
+      src: "/images/software/software-1.jpg",
+      alt: "Source code on a developer's screen",
+    },
   },
 
   // ───────────────── Procurement & Supply Chain Solutions ─────────────────
@@ -448,6 +468,10 @@ export const services: Service[] = [
       "Government & industrial procurement support",
       "Turnkey equipment supply",
     ],
+    image: {
+      src: "/images/procurement/logistics-1.jpg",
+      alt: "Heavy-duty dump truck delivering material to a project site",
+    },
   },
 
   // ───────────────── Health, Safety & Environmental (HSE) Services ─────────────────
@@ -470,6 +494,10 @@ export const services: Service[] = [
       "Emergency preparedness",
       "Environmental compliance programs",
     ],
+    image: {
+      src: "/images/hse/hse-management-1.png",
+      alt: "Site workers in high-visibility safety gear and helmets on a project site",
+    },
   },
   {
     slug: "safety-equipment-ppe",
@@ -532,6 +560,10 @@ export const services: Service[] = [
       "SCBA breathing apparatus",
       "Confined-space & rescue equipment",
     ],
+    image: {
+      src: "/images/hse/fall-harness.jpg",
+      alt: "Full-body fall-protection harness for confined-space and height rescue",
+    },
   },
   {
     slug: "medical-first-aid",
@@ -550,6 +582,10 @@ export const services: Service[] = [
       "Basket stretchers & spine boards",
       "Emergency & medical response equipment",
     ],
+    image: {
+      src: "/images/medical/medical-1.jpg",
+      alt: "First-aid medical kit with stethoscope, thermometer, dressings and medication",
+    },
   },
 ];
 

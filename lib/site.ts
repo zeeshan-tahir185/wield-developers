@@ -27,7 +27,7 @@ export const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
   { label: "EPC Projects", href: "/epc-projects" },
-  { label: "Transformers & Electrical", href: "/transformers" },
+  { label: "Manufacturing Facility", href: "/transformers" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ] as const;

@@ -97,10 +97,7 @@ export function Navbar() {
                 </li>
               );
             }
-            // Keep the long label compact in the bar.
-            const label =
-              link.href === "/transformers" ? "Transformers" : link.label;
-            // (compact label for the long nav item)
+            const label = link.label;
             return (
               <li key={link.href}>
                 <Link

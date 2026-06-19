@@ -105,8 +105,10 @@ export default function ContactPage() {
 
             {/* Hours + links */}
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              <div className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-6">
-                <Clock className="h-6 w-6 shrink-0 text-gold-500" strokeWidth={1.6} />
+              <div className="flex h-full items-start gap-4 rounded-2xl border border-slate-200 bg-white p-6">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-navy-900 text-gold-400">
+                  <Clock className="h-6 w-6" strokeWidth={1.6} />
+                </div>
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                     Working Hours
@@ -116,17 +118,24 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center rounded-2xl border border-slate-200 bg-white p-6">
-                <a
-                  href={site.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm font-medium text-navy-700 hover:text-gold-600"
-                >
-                  <Globe className="h-4 w-4 text-gold-500" />
-                  www.wielddevelopers.com
-                </a>
-              </div>
+              <a
+                href={site.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-full items-start gap-4 rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg"
+              >
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-navy-900 text-gold-400 transition-colors group-hover:bg-gold-500 group-hover:text-navy-950">
+                  <Globe className="h-6 w-6" strokeWidth={1.6} />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    Website
+                  </div>
+                  <div className="mt-1 text-sm font-medium text-navy-900">
+                    www.wielddevelopers.com
+                  </div>
+                </div>
+              </a>
             </div>
           </Reveal>
 
